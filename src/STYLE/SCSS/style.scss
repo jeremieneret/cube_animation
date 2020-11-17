@@ -76,6 +76,10 @@ section {
         background: white;
         @include shadow;
         margin: auto auto 48px auto;
+        -webkit-animation: opacityAnimation 2s ease;
+        -moz-animation: opacityAnimation 2s ease;
+        -o-animation: opacityAnimation 2s ease;
+        animation: opacityAnimation 2s ease;
 
         &:hover {
             border-radius: 10px;

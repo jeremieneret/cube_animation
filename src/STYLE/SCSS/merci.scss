@@ -7,6 +7,10 @@ section {
         font-size: 100px;
         margin-top: calc(50vh - 200px);
         margin-bottom: 48px;
+        -webkit-animation: opacityAnimation 2s ease;
+        -moz-animation: opacityAnimation 2s ease;
+        -o-animation: opacityAnimation 2s ease;
+        animation: opacityAnimation 2s ease;
     }
 
     a {
@@ -16,6 +20,10 @@ section {
         font-size: large;
         border-radius: 6px;
         cursor: pointer;
+        -webkit-animation: opacityAnimation 5s ease;
+        -moz-animation: opacityAnimation 5s ease;
+        -o-animation: opacityAnimation 5s ease;
+        animation: opacityAnimation 5s ease;
         
     }
 
