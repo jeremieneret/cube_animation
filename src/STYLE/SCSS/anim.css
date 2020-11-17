@@ -1,0 +1,164 @@
+@keyframes introAnimation {
+  from {
+    background: #fafafa;
+  }
+  to {
+    background: linear-gradient(360deg, #ec1587, #15e2ec);
+    background-size: 400% 400%;
+    -webkit-animation: GradientAnimation 5s ease;
+    -moz-animation: GradientAnimation 5s ease;
+    -o-animation: GradientAnimation 5s ease;
+    animation: GradientAnimation 5s ease;
+  }
+}
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-25px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(17px, -17px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(17px, 17px);
+}
+
+.bonjour.open {
+  display: block;
+  animation: fadein 2s;
+}
+
+@-webkit-keyframes GradientAnimation {
+  0% {
+    background-position: 44% 0%;
+  }
+  50% {
+    background-position: 57% 100%;
+  }
+  100% {
+    background-position: 44% 0%;
+  }
+}
+@-moz-keyframes GradientAnimation {
+  0% {
+    background-position: 44% 0%;
+  }
+  50% {
+    background-position: 57% 100%;
+  }
+  100% {
+    background-position: 44% 0%;
+  }
+}
+@-o-keyframes GradientAnimation {
+  0% {
+    background-position: 44% 0%;
+  }
+  50% {
+    background-position: 57% 100%;
+  }
+  100% {
+    background-position: 44% 0%;
+  }
+}
+@keyframes GradientAnimation {
+  0% {
+    background-position: 44% 0%;
+  }
+  50% {
+    background-position: 57% 100%;
+  }
+  100% {
+    background-position: 44% 0%;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* sur Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  /* sur Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeout {
+  /* sur Firefox */
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeout {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeout {
+  /* sur Opera */
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes rotateAnimation {
+  from {
+    transform: rotateY(0) rotateX(0);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+@keyframes opacityAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=anim.css.map */

@@ -1,0 +1,25 @@
+@import "./style.scss";
+
+section {
+    text-align: center;
+
+    h1 {
+        font-size: 100px;
+        margin-top: calc(50vh - 200px);
+        margin-bottom: 48px;
+    }
+
+    a {
+        background: white;
+        color: #eeeeee;
+        padding: 8px 12px;
+        font-size: large;
+        border-radius: 6px;
+        cursor: pointer;
+        
+    }
+
+
+}
+
+

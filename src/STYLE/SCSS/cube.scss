@@ -1,0 +1,149 @@
+@import "./style.scss";
+
+///////////////////////////////////////////////////////GENERAL
+body {
+    animation: opacityAnimation 15s ease;
+
+    @include Lato60028;
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(360deg, #ec1587, #15e2ec);
+        background-size: 400% 400%;
+        -webkit-animation: GradientAnimation 5s ease infinite;
+        -moz-animation: GradientAnimation 5s ease infinite;
+        -o-animation: GradientAnimation 5s ease infinite;
+        animation: GradientAnimation 5s ease infinite;
+        perspective-origin: 150% -800px;
+    }
+}
+
+section {
+    display: flex;
+    justify-content: center;
+
+}
+
+///////////////////////////////////////////////////////////CUBE
+.cube {
+    transform-style: preserve-3d;
+    animation: rotateAnimation 20s linear infinite;
+    z-index: 5;
+}
+
+//FACES
+div {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+}
+
+//COLORS
+.front,
+.back,
+.left,
+.right,
+.top,
+.bottom {
+    opacity: 0.4;
+    text-align: center;
+    color: white;
+}
+
+.front,
+.back,
+.top {
+    background: linear-gradient(180deg, #ec1587, #15e2ec);
+    background-size: 400% 400%;
+    -webkit-animation: GradientAnimation 3s ease infinite;
+    -moz-animation: GradientAnimation 3s ease infinite;
+    -o-animation: GradientAnimation 3s ease infinite;
+    animation: GradientAnimation 3s ease infinite;
+}
+
+.left,
+.right {
+    background: linear-gradient(270deg, #ec1587, #15e2ec);
+    background-size: 400% 400%;
+    -webkit-animation: GradientAnimation 5s ease infinite;
+    -moz-animation: GradientAnimation 5s ease infinite;
+    -o-animation: GradientAnimation 5s ease infinite;
+    animation: GradientAnimation 5s ease infinite;
+}
+
+.top,
+.bottom {
+    background: linear-gradient(360deg, #ec1587, #15e2ec);
+    background-size: 400% 400%;
+    -webkit-animation: GradientAnimation 7s ease infinite;
+    -moz-animation: GradientAnimation 7s ease infinite;
+    -o-animation: GradientAnimation 7s ease infinite;
+    animation: GradientAnimation 7s ease infinite;
+}
+
+///////////////////////////////////////////////////TRANSFORMATION
+.front {
+    transform: translateZ(200px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(200px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(200px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(200px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(200px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(200px);
+}
+
+/////////////////////////////////////////////////////////////TEXT
+h1 {
+    color: #15e2ec;
+    z-index: 1;
+    -webkit-animation: opacityAnimation 100s ease-in-out;
+    -moz-animation: opacityAnimation 100s ease-in-out;
+    -o-animation: opacityAnimation 100s ease-in-out;
+    animation: opacityAnimation 100s ease-in-out;
+}
+
+//////////////////////////////////////////////////////CLOSE BUTTON
+.close {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    top: 50px;
+    right: 50px;
+    transition: all 0.4s ease-in-out;
+
+    &__btn::before,
+    &__btn::after {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        background: #fff;
+        opacity: 0.5;
+        border-radius: 3px;
+        box-shadow: 0 1px 2.5px rgba(255, 101, 47, 0.2);
+        transition: all 0.4s ease-in-out;
+    }
+
+    &__btn::before {
+        transform: rotate(45deg) translate(17px, -17px);
+    }
+
+    &__btn::after {
+        transform: rotate(-45deg) translate(17px, 17px);
+    }
+}
