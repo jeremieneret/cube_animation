@@ -11,20 +11,29 @@ section {
         -moz-animation: opacityAnimation 2s ease;
         -o-animation: opacityAnimation 2s ease;
         animation: opacityAnimation 2s ease;
+        
     }
 
     a {
         background: white;
         color: #eeeeee;
+        color: #f09cd7;
         padding: 8px 12px;
         font-size: large;
         border-radius: 6px;
         cursor: pointer;
-        -webkit-animation: opacityAnimation 5s ease;
-        -moz-animation: opacityAnimation 5s ease;
-        -o-animation: opacityAnimation 5s ease;
-        animation: opacityAnimation 5s ease;
+        -webkit-animation: opacityAnimation 2.5s ease;
+        -moz-animation: opacityAnimation 2.5s ease;
+        -o-animation: opacityAnimation 2.5s ease;
+        animation: opacityAnimation 2.5s ease;
+
         
+        &:hover {
+
+            background: orchid;
+            color: white;
+            transition: 1s ease-in-out;
+        }
     }
 
 

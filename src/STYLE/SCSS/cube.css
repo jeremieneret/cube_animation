@@ -359,6 +359,7 @@ a {
 
 body {
   background: #eeeeee;
+  background: #f09cd7;
   color: white;
   font-family: "Poppins", sans-serif;
   height: 100vh;
@@ -379,6 +380,8 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 80px;
+  height: 80px;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
@@ -386,6 +389,7 @@ section {
   width: 50px;
   height: 7px;
   background: #eeeeee;
+  background: #f09cd7;
   border-radius: 5px;
   transition: all 0.4s ease-in-out;
 }
@@ -395,6 +399,7 @@ section {
   width: 50px;
   height: 7px;
   background: #eeeeee;
+  background: #f09cd7;
   border-radius: 5px;
   transition: all 0.4s ease-in-out;
 }
