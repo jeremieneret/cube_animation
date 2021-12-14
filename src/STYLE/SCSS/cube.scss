@@ -1,11 +1,20 @@
-@import "./style.scss";
-
 ///////////////////////////////////////////////////////GENERAL
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background: #15e2ec;
     animation: opacityAnimation 15s ease;
-
-    @include Lato60028;
-
+    font-family: sans-serif;
     .container {
         width: 100vw;
         height: 100vh;
@@ -22,7 +31,7 @@ body {
 section {
     display: flex;
     justify-content: center;
-
+    align-items: center;
 }
 
 ///////////////////////////////////////////////////////////CUBE
@@ -117,33 +126,68 @@ h1 {
     animation: opacityAnimation 100s ease-in-out;
 }
 
-//////////////////////////////////////////////////////CLOSE BUTTON
-.close {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    top: 50px;
-    right: 50px;
-    transition: all 0.4s ease-in-out;
-
-    &__btn::before,
-    &__btn::after {
-        content: "";
-        position: absolute;
-        width: 18px;
-        height: 2px;
-        background: #fff;
-        opacity: 0.5;
-        border-radius: 3px;
-        box-shadow: 0 1px 2.5px rgba(255, 101, 47, 0.2);
-        transition: all 0.4s ease-in-out;
+//GRADIENT ANIMATION
+@-webkit-keyframes GradientAnimation {
+    0% {
+        background-position: 44% 0%;
     }
-
-    &__btn::before {
-        transform: rotate(45deg) translate(17px, -17px);
+    50% {
+        background-position: 57% 100%;
     }
+    100% {
+        background-position: 44% 0%;
+    }
+}
+@-moz-keyframes GradientAnimation {
+    0% {
+        background-position: 44% 0%;
+    }
+    50% {
+        background-position: 57% 100%;
+    }
+    100% {
+        background-position: 44% 0%;
+    }
+}
+@-o-keyframes GradientAnimation {
+    0% {
+        background-position: 44% 0%;
+    }
+    50% {
+        background-position: 57% 100%;
+    }
+    100% {
+        background-position: 44% 0%;
+    }
+}
+@keyframes GradientAnimation {
+    0% {
+        background-position: 44% 0%;
+    }
+    50% {
+        background-position: 57% 100%;
+    }
+    100% {
+        background-position: 44% 0%;
+    }
+}
 
-    &__btn::after {
-        transform: rotate(-45deg) translate(17px, 17px);
+//ROTATE ANIMATION
+@keyframes rotateAnimation {
+    from {
+        transform: rotateY(0) rotateX(0);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
+//OPACITY ANIMATION
+@keyframes opacityAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

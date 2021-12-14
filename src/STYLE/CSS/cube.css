@@ -1,0 +1,167 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  background: #15e2ec;
+  -webkit-animation: opacityAnimation 15s ease;
+          animation: opacityAnimation 15s ease;
+  font-family: sans-serif;
+}
+body .container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(360deg, #ec1587, #15e2ec);
+  background-size: 400% 400%;
+  -webkit-animation: GradientAnimation 5s ease infinite;
+  animation: GradientAnimation 5s ease infinite;
+  perspective-origin: 150% -800px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cube {
+  transform-style: preserve-3d;
+  -webkit-animation: rotateAnimation 20s linear infinite;
+          animation: rotateAnimation 20s linear infinite;
+  z-index: 5;
+}
+
+div {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+}
+
+.front,
+.back,
+.left,
+.right,
+.top,
+.bottom {
+  opacity: 0.4;
+  text-align: center;
+  color: white;
+}
+
+.front,
+.back,
+.top {
+  background: linear-gradient(180deg, #ec1587, #15e2ec);
+  background-size: 400% 400%;
+  -webkit-animation: GradientAnimation 3s ease infinite;
+  animation: GradientAnimation 3s ease infinite;
+}
+
+.left,
+.right {
+  background: linear-gradient(270deg, #ec1587, #15e2ec);
+  background-size: 400% 400%;
+  -webkit-animation: GradientAnimation 5s ease infinite;
+  animation: GradientAnimation 5s ease infinite;
+}
+
+.top,
+.bottom {
+  background: linear-gradient(360deg, #ec1587, #15e2ec);
+  background-size: 400% 400%;
+  -webkit-animation: GradientAnimation 7s ease infinite;
+  animation: GradientAnimation 7s ease infinite;
+}
+
+.front {
+  transform: translateZ(200px);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(200px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(200px);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(200px);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(200px);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(200px);
+}
+
+h1 {
+  color: #15e2ec;
+  z-index: 1;
+  -webkit-animation: opacityAnimation 100s ease-in-out;
+  animation: opacityAnimation 100s ease-in-out;
+}
+
+@-webkit-keyframes GradientAnimation {
+  0% {
+    background-position: 44% 0%;
+  }
+  50% {
+    background-position: 57% 100%;
+  }
+  100% {
+    background-position: 44% 0%;
+  }
+}
+@keyframes GradientAnimation {
+  0% {
+    background-position: 44% 0%;
+  }
+  50% {
+    background-position: 57% 100%;
+  }
+  100% {
+    background-position: 44% 0%;
+  }
+}
+@-webkit-keyframes rotateAnimation {
+  from {
+    transform: rotateY(0) rotateX(0);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+@keyframes rotateAnimation {
+  from {
+    transform: rotateY(0) rotateX(0);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+@-webkit-keyframes opacityAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes opacityAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=cube.css.map */
